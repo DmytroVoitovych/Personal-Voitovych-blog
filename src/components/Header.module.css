@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+  border-radius: 10px;
+  border: 1px solid var(--bor-cl);
+  background-color: var(--bg-extra);
+  box-shadow: var(--shadow);
+}
+
+.rightBlock {
+  display: flex;
+}
+
+.avatar {
+  border-radius: 10px;
+}
+
+.rightBlock:has([popover]) nav {
+    display: flex;
+    position: static;
+
+    @media (max-width: 639.9px) {
+        display: none;
+      }
+  }
+
+.rightBlock:has([popover]:popover-open) nav {
+ display: flex;
+ position: static;
+ transform: none;
+    
+  @media (max-width: 639.9px) {
+    display: grid;
+  }
+}
+
+.rightBlock [popovertarget] {
+  display: none;
+
+  @media (max-width: 639.9px) {
+    display: block;
+  }
+}
