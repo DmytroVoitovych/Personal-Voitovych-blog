@@ -9,6 +9,10 @@ gap: 24px;
 
 }
 
+.navBlock[data-mobile="true"][data-show="false"] {
+display: none;
+}
+
 .navBlock[data-mobile="true"] {
   display: grid;
   margin-top: 12px;
@@ -17,10 +21,9 @@ gap: 24px;
   padding: 12px;
   background-color: var(--bg-extra);
   box-shadow: var(--popup-shadow);
+  interpolate-size: allow-keywords;
 
-  @media (min-width: 640px) {
-    display: none;
-  }
+ 
 }
 
 .navBlock[data-mobile="true"] a:not(:last-child) {

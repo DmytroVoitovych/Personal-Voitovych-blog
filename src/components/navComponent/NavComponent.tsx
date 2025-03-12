@@ -1,9 +1,12 @@
 import Link from "next/link";
 import styles from './NavComponent.module.css';
 
+
 const NavComponent = ({mobile}:{mobile:boolean}) => {
+ 
+
   return (
-    <nav className={styles.navBlock}  data-mobile={mobile}>
+   <nav className={`${styles.navBlock} text-preset-7`}  data-mobile={mobile} >
       <Link href="/">Home</Link>
       <Link href="/blog">Blog</Link>
       <Link href="/about">About</Link>

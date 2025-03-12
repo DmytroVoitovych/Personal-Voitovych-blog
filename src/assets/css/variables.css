@@ -55,7 +55,7 @@
   }
 
 
-  root.dark{
+  :root.dark{
     --bg-main:var(--neutral-900);
     --bg-extra:var(--neutral-800);  
 
