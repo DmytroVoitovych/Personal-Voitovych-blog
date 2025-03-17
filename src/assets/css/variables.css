@@ -40,9 +40,9 @@
     --tip-bg:var(--green-700);
     --warning-bg: var(--yellow-700);
     --information-bg : var(--blue-700);
-
+    
     --accent-cl: var(--blue-500);
-
+    
     --bg-main:var(--neutral-100);
     --bg-extra:var(--neutral-50);
     --bg-btn-menu:var(--neutral-700);
@@ -52,9 +52,10 @@
     --txt-main: var(--neutral-700);
     --txt-additional:var(--neutral-600);
     --txt-btn-menu:var(--neutral-50);
+    --txt-active:var(--neutral-900);
 
    --shadow: 0 6px 10px 0 rgba(123, 123, 123, 0.03); 
-   --popup-shadow: 0 8px 15px 0 rgba(8, 6, 25, 0.06);;
+   --popup-shadow: 0 8px 15px 0 rgba(8, 6, 25, 0.06);
   }
 
 
@@ -68,9 +69,12 @@
     --txt-main: var(--neutral-50);
     --txt-additional:var(--neutral-400);
     --txt-btn-menu:var(--neutral-900);
+    --txt-active:var(--neutral-50);
 
     --shadow: 0 6px 10px 0 rgba(123, 123, 123, 0.03);
-    --popup-shadow: 0 8px 15px 0 rgba(8, 6, 25, 0.06);;
+    --popup-shadow: 0 8px 15px 0 rgba(8, 6, 25, 0.06);
+
+    --accent-cl: var(--blue-700);
   }
 
 

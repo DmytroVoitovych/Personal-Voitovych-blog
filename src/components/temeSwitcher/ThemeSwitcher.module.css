@@ -9,6 +9,7 @@ height: 40px;
 border-radius: 8px;
 border: 1px solid var(--bor-cl);
 background-color: var(--bg-main);
+cursor: pointer;
 }
 
 .themeSwitcher svg{

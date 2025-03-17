@@ -1,13 +1,29 @@
 
+
+
 .navBlock[data-mobile="false"]{
 display: none;
 gap: 24px;    
 
 @media (min-width: 640px) {
     display: flex;
+    align-items: center;
+    margin-right: 20px;
   }
 
 }
+
+.activeLink {
+  color: var(--txt-active);
+
+  @media (min-width: 640px) {
+  color: inherit;  
+  text-decoration: underline;
+  text-decoration-color: var(--accent-cl);  
+  text-decoration-thickness: 3px;
+  text-decoration-skip-ink: none;
+  }
+  }
 
 .navBlock[data-mobile="true"][data-show="false"] {
 display: none;
@@ -22,7 +38,7 @@ display: none;
   background-color: var(--bg-extra);
   box-shadow: var(--popup-shadow);
   interpolate-size: allow-keywords;
-
+  color: var(--txt-additional);
  
 }
 
