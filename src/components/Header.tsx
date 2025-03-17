@@ -5,7 +5,7 @@ import avatar from "@/assets/images/avatar.jpeg";
 import styles from "./Header.module.css";
 import ThemeSwitcher from "./temeSwitcher/ThemeSwitcher";
 import NavComponent from "./navComponent/NavComponent";
-import { Menu } from "@/utils/svglist";
+import { Close, Menu } from "@/utils/svglist";
 import { useState } from "react";
 
 const Header = () => {
@@ -28,7 +28,7 @@ const Header = () => {
           className={styles.menuButton}
           onClick={() => setShow((prev) => !prev)}
         >
-          <Menu />
+         {show?<Close/>: <Menu />}
         </button>
         <ThemeSwitcher />
       </div>

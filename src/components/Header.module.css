@@ -49,8 +49,16 @@
   border-radius: 10px;
 }
 
+.header[data-menu="true"] .menuButton{
+padding: 10px;  
+border-radius: 10px;
+background-color: var(--bg-btn-menu);
+stroke: var(--txt-btn-menu);
+}
+
 .menuButton {
-  display: block;
+  display: flex;
+  align-items: center;
   stroke: var(--txt-main);
   margin-right: 16px;
 

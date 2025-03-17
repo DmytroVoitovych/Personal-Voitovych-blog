@@ -45,11 +45,14 @@
 
     --bg-main:var(--neutral-100);
     --bg-extra:var(--neutral-50);
+    --bg-btn-menu:var(--neutral-700);
 
     --bor-cl:var(--neutral-200);
 
     --txt-main: var(--neutral-700);
     --txt-additional:var(--neutral-600);
+    --txt-btn-menu:var(--neutral-50);
+
    --shadow: 0 6px 10px 0 rgba(123, 123, 123, 0.03); 
    --popup-shadow: 0 8px 15px 0 rgba(8, 6, 25, 0.06);;
   }
@@ -58,11 +61,14 @@
   :root.dark{
     --bg-main:var(--neutral-900);
     --bg-extra:var(--neutral-800);  
+    --bg-btn-menu:var(--neutral-50);
 
     --bor-cl:var(--neutral-700);
 
     --txt-main: var(--neutral-50);
     --txt-additional:var(--neutral-400);
+    --txt-btn-menu:var(--neutral-900);
+
     --shadow: 0 6px 10px 0 rgba(123, 123, 123, 0.03);
     --popup-shadow: 0 8px 15px 0 rgba(8, 6, 25, 0.06);;
   }

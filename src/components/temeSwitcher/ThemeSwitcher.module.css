@@ -1,0 +1,20 @@
+
+
+.themeSwitcher{
+display: flex;
+align-items: center;
+justify-content: center;    
+ width: 40px;
+height: 40px;
+border-radius: 8px;
+border: 1px solid var(--bor-cl);
+background-color: var(--bg-main);
+}
+
+.themeSwitcher svg{
+position: absolute;
+   
+}
+.themeSwitcher input{
+opacity: 0;
+}
