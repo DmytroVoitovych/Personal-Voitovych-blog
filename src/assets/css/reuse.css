@@ -101,3 +101,8 @@
     letter-spacing: -0.4px;
    }
 
+   .divider {
+    border: none;
+    height: 1px; 
+    background-color: var(--bor-cl); 
+    }

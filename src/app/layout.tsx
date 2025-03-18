@@ -64,10 +64,12 @@ export default function RootLayout({
       <body className={`${dmSans.variable}${firaCode.variable}`}>
         <div className="wrapper">
         <Header/>
+      <div className="innerWrapper">
          <NavComponent mobile={true} />
         <main>
        {children}
         </main>
+        </div>  
         </div>
       </body>
     </html>

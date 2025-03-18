@@ -31,7 +31,6 @@ display: none;
 
 .navBlock[data-mobile="true"] {
   display: grid;
-  margin-top: 12px;
   border-radius: 10px;
   border: 1px solid var(--bor-cl);
   padding: 12px;
@@ -39,7 +38,8 @@ display: none;
   box-shadow: var(--popup-shadow);
   interpolate-size: allow-keywords;
   color: var(--txt-additional);
- 
+  position: relative;
+  z-index: 1;
 }
 
 .navBlock[data-mobile="true"] a:not(:last-child) {

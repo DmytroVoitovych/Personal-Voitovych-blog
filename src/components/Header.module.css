@@ -7,9 +7,12 @@
   border: 1px solid var(--bor-cl);
   background-color: var(--bg-extra);
   box-shadow: var(--shadow);
+  position: relative;
+  top: 2px;
+  z-index: 1;
 }
 
-.header[data-menu="false"] + nav {
+.header[data-menu="false"] + * nav {
   height: 0;
   display: none;
   opacity: 0;
@@ -24,7 +27,7 @@
   }
 }
 
-.header[data-menu="true"] + nav {
+.header[data-menu="true"] + * nav {
   display: grid;
   height: auto;
   opacity: 1;
