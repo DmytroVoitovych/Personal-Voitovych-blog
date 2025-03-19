@@ -34,3 +34,10 @@ color: var(--txt-additional);
   fill: var(--txt-main);
  }
 
+.latestArticles{
+padding-bottom: 32px;  
+}
+
+.latestArticles h2 {
+margin-bottom: 32px;  
+}
