@@ -1,0 +1,40 @@
+.sectionBlog {
+  padding-top: 32px;
+  padding-bottom: 16px;
+}
+
+.sectionBlog {
+  padding-bottom: 16px;
+}
+
+.sectionBlog h1 {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.sectionBlog h1::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: var(--accent-cl);
+}
+
+.sectionBlog  h1 + p {
+color: var(--txt-additional);
+margin-bottom: 24px;
+}
+
+.sectionBlog > ul{
+gap: 0;  
+}
+
+.sectionBlog > ul > li {
+  padding-top: 20px;
+  }
+
+.sectionBlog > ul > li:not(:last-child) {
+padding-bottom: 20px;
+border-bottom: 1px solid var(--bor-cl);
+}

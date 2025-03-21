@@ -1,8 +1,10 @@
 // import Image from "next/image";
-import { LogoGithub, LogoLinkedin, LogoMentor, LogoX } from "@/utils/svglist";
 import styles from "./page.module.css";
 import { ArticlesList } from "@/components/allArticlesList/ArticlesList";
 import { ShowAllArticles } from "@/components/moreArticles/ShowAllArticles";
+import { SocialLink } from "@/components/shared/SocialLink";
+
+const homeDatabaseQuery: ['title','id','publishedAt','slug'] =  ['title','id','publishedAt','slug'];
 
 export default function Home() {
   return (
@@ -19,45 +21,12 @@ export default function Home() {
           and hopefully inspire anyone else who’s learning to code. Welcome to my
           corner of the internet, and thanks for stopping by!
         </p>
-        <ul className={styles.heroLink}>
-          <li>
-            <a rel="noreferrer" target="_blank" href="https://x.com/">
-              <LogoX width="16" height="16" />
-            </a>
-          </li>
-          <li>
-            <a
-              rel="noreferrer"
-              target="_blank"
-              href="https://github.com/DmytroVoitovych"
-            >
-              <LogoGithub width="16" height="16" />
-            </a>
-          </li>
-          <li>
-            <a
-              rel="noreferrer"
-              target="_blank"
-              href="https://www.linkedin.com/in/dmytro-voitovych/"
-            >
-              <LogoLinkedin width="16" height="16" />
-            </a>
-          </li>
-          <li>
-            <a
-              rel="noreferrer"
-              target="_blank"
-              href="https://www.frontendmentor.io/profile/DmytroVoitovych"
-            >
-              <LogoMentor width="16" height="16" />
-            </a>
-          </li>
-        </ul>
+        <SocialLink  className={styles.heroLink} width={16} height={16} />
         <hr className="divider" />
       </section>
       <section className={styles.latestArticles}>
         <h2 className="text-preset-2">Latest Articles</h2>
-        <ArticlesList />
+        <ArticlesList query={homeDatabaseQuery} />
         <ShowAllArticles />
         <hr className="divider" />
         

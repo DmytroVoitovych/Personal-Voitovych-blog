@@ -34,16 +34,21 @@ margin-left: auto;
 margin-right: auto;
 min-height: inherit;
 max-width: 640px;
+display: grid;
+grid-template-rows: min-content 1fr;
 }
 
 
 
 main{
 padding: 0 14px;
+flex: 1;
 }
 
 .innerWrapper{
  position: relative; 
+ display: flex;
+ flex-direction: column;
 
 }
 
@@ -56,7 +61,7 @@ padding: 0 14px;
 content: '';
 position: absolute;
 width: 1px;
-height: 100%;  
+height: 99%;  
 left: 4px;
 top: 0;
 background-color: var(--bor-cl);
@@ -66,7 +71,7 @@ background-color: var(--bor-cl);
   content: '';
   position: absolute;
   width: 1px;
-  height: 100%;  
+  height: 99%;  
   right: 4px;
   top: 0;
   background-color: var(--bor-cl);

@@ -12,8 +12,13 @@
 }
 
 .allArticlesList span {
+  display: block;  
   color: var(--txt-additional);
 }
+
+.allArticlesList span:has(+p) {
+  margin-bottom: 8px;  
+  }
 
 .allArticlesList li:nth-child(5) ~ li {
   height: auto;
@@ -27,9 +32,13 @@
   }
 }
 
-.allArticlesList:not(:has(+ label > input:checked)) li:nth-child(5) ~ li {
+.allArticlesList:not(:has(+ label > input:checked)):has(+ label) li:nth-child(5) ~ li {
   display: none;
   height: 0;
   opacity: 0;
   transition: height 250ms ease-in-out, opacity 150ms ease-in-out,display 250ms allow-discrete ease-in-out;
 }
+
+.allArticlesList p {
+   color: var(--txt-additional);
+  }

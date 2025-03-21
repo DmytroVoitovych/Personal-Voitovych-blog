@@ -3,6 +3,7 @@ import localFont from 'next/font/local'
 import "./globals.css";
 import Header from "@/components/Header";
 import NavComponent from "@/components/navComponent/NavComponent";
+import { Footer } from "@/components/Footer";
 
 const dmSans = localFont({
   src: [
@@ -69,6 +70,7 @@ export default function RootLayout({
         <main>
        {children}
         </main>
+        <Footer/>
         </div>  
         </div>
       </body>
