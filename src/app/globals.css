@@ -43,6 +43,7 @@ grid-template-rows: min-content 1fr;
 main{
 padding: 0 14px;
 flex: 1;
+overflow-y: hidden;
 }
 
 .innerWrapper{

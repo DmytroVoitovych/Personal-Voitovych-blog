@@ -9,7 +9,9 @@ type ArticleKeys = keyof Database["public"]["Tables"]["Developers articles"]["Ro
 type RowData = Database["public"]["Tables"]["Developers articles"]["Row"];
 interface ArticlesListProps {
   query?: ArticleKeys[];
-}
+  
+};
+
 
 export const ArticlesList = async ({ query }: ArticlesListProps) => {
   const queryReq = query?.join(",");
