@@ -46,13 +46,19 @@
     --bg-main:var(--neutral-100);
     --bg-extra:var(--neutral-50);
     --bg-btn-menu:var(--neutral-700);
+    --bg-hover:var(--neutral-200);
+    --bg-btn:var(--blue-500);
+    --bg-btn-hover:var(--blue-700);
 
     --bor-cl:var(--neutral-200);
+    --bor-input: var(--neutral-300);
 
     --txt-main: var(--neutral-700);
     --txt-additional:var(--neutral-600);
     --txt-btn-menu:var(--neutral-50);
     --txt-active:var(--neutral-900);
+    --txt-placeholder:var(--neutral-600);
+    --txt-btn:var(--neutral-900);
 
    --shadow: 0 6px 10px 0 rgba(123, 123, 123, 0.03); 
    --popup-shadow: 0 8px 15px 0 rgba(8, 6, 25, 0.06);
@@ -63,13 +69,16 @@
     --bg-main:var(--neutral-900);
     --bg-extra:var(--neutral-800);  
     --bg-btn-menu:var(--neutral-50);
+    --bg-hover:var(--neutral-700);
 
     --bor-cl:var(--neutral-700);
+    --bor-input: var(--neutral-600);
 
     --txt-main: var(--neutral-50);
     --txt-additional:var(--neutral-400);
     --txt-btn-menu:var(--neutral-900);
     --txt-active:var(--neutral-50);
+    --txt-placeholder:var(--neutral-300);
 
     --shadow: 0 6px 10px 0 rgba(123, 123, 123, 0.03);
     --popup-shadow: 0 8px 15px 0 rgba(8, 6, 25, 0.06);

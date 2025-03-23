@@ -26,7 +26,7 @@ export const ArticlesList = async ({ query }: ArticlesListProps) => {
     <ul className={styles.allArticlesList}>
       {articles?.map((post) => (
         <li key={post.id}>
-          <Link href={`/${post.slug}`} className="text-preset-5">
+          <Link href={`/blog/${post.slug}`} className="text-preset-5">
             {post.title}
           </Link>
           <span className="text-preset-8-italic">
