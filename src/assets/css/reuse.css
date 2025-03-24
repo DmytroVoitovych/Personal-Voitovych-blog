@@ -1,108 +1,169 @@
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 16px;
-    max-width: 512px;
-  
-    
-  
-    @media screen and (min-width: 768px) {
-      max-width: 1022px;
-     }
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+  max-width: 512px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 1022px;
+  }
+}
+
+.text-preset-1 {
+  font-family: var(--font-dmSans), sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1.3;
+  letter-spacing: -1px;
+}
+
+.text-preset-2 {
+  font-family: var(--font-dmSans), sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.text-preset-3 {
+  font-family: var(--font-dmSans), sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.text-preset-4 {
+  font-family: var(--font-dmSans), sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.text-preset-5 {
+  font-family: var(--font-dmSans), sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.text-preset-6 {
+  font-family: var(--font-dmSans), sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: -0.5px;
+}
+
+.text-preset-7 {
+  font-family: var(--font-dmSans), sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+}
+
+.text-preset-7-semibold {
+  font-family: var(--font-dmSans), sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+}
+
+.text-preset-8 {
+  font-family: var(--font-dmSans), sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: -0.2px;
+}
+
+.text-preset-8-italic {
+  font-family: var(--font-dmSans), sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: -0.2px;
+}
+
+.text-preset-9 {
+  font-family: "Fira Code", monospace;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.46;
+  letter-spacing: -0.4px;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background-color: var(--bor-cl);
+}
+
+/* dynamic class for post */
+
+.dy-h2-h3 {
+  margin-bottom: 16px;
+}
+
+.dy-p{
+color: var(--txt-additional);  
+}
+
+.dy-p:has( + :not( .divider)) {
+  margin-bottom: 12px;
+}
+
+.dy-q{
+border-left: 4px solid var(--bor-q);  
+padding-left: 12px;
+margin-bottom: 12px;
+}
+
+.dy-q p{
+color: var(--txt-main);  
+}
+
+.dy-ol{
+display: grid;
+gap: 12px;  
+list-style:decimal;
+margin-left: 16px;
+color: var(--txt-additional);
+}
+
+.dy-ol:has( + :not( .divider)) {
+  margin-bottom: 12px;
+}
+
+.dy-ol li::marker{
+  font-family: var(--font-dmSans), sans-serif;
+  font-weight: 600;
+}
+
+.dy-ul{
+  display: grid;
+  gap: 12px;  
+  list-style: unset;
+  margin-left: 16px;
+  color: var(--txt-additional);
+  }
+
+  .dy-ul:has( + :not( .divider)) {
+    margin-bottom: 12px;
+  }
+
+  .dy-ul li::marker{
+    font-family: var(--font-dmSans), sans-serif;
+    font-weight: 600;
   }
 
 
-  .text-preset-1 {
+  .dy-em{
     font-family: var(--font-dmSans), sans-serif;
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 1.3;
-    letter-spacing: -1px;
-   }
-   
-   .text-preset-2 {
-    font-family: var(--font-dmSans), sans-serif;
-    font-weight: 800;
-    font-size: 32px;
-    line-height: 1.3;
-    letter-spacing: -0.5px;
-   }
-   
-   .text-preset-3 {
-    font-family: var(--font-dmSans), sans-serif;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.3;
-    letter-spacing: -0.5px;
-   }
-   
-   .text-preset-4 {
-    font-family: var(--font-dmSans), sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 1.3;
-    letter-spacing: -0.5px;
-   }
-   
-   .text-preset-5 {
-    font-family: var(--font-dmSans), sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.3;
-    letter-spacing: -0.5px;
-   }
-   
-   .text-preset-6 {
-    font-family: var(--font-dmSans), sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.5;
-    letter-spacing: -0.5px;
-   }
-   
-   .text-preset-7 {
-    font-family: var(--font-dmSans), sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.5;
-    letter-spacing: -0.2px;
-   }
-   
-   .text-preset-7-semibold {
-    font-family: var(--font-dmSans), sans-serif;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 1.5;
-    letter-spacing: -0.2px;
-   }
-   
-   .text-preset-8 {
-    font-family: var(--font-dmSans), sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.3;
-    letter-spacing: -0.2px;
-   }
-   
-   .text-preset-8-italic {
-    font-family: var(--font-dmSans), sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 16px;
-    line-height: 1.3;
-    letter-spacing: -0.2px;
-   }
-   
-   .text-preset-9 {
-    font-family: 'Fira Code', monospace;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.46;
-    letter-spacing: -0.4px;
-   }
-
-   .divider {
-    border: none;
-    height: 1px; 
-    background-color: var(--bor-cl); 
-    }
+    font-weight: 600; 
+  }

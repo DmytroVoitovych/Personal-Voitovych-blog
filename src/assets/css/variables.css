@@ -52,6 +52,7 @@
 
     --bor-cl:var(--neutral-200);
     --bor-input: var(--neutral-300);
+    --bor-q:var(--neutral-400);
 
     --txt-main: var(--neutral-700);
     --txt-additional:var(--neutral-600);
@@ -73,6 +74,7 @@
 
     --bor-cl:var(--neutral-700);
     --bor-input: var(--neutral-600);
+    --bor-q:var(--neutral-400);
 
     --txt-main: var(--neutral-50);
     --txt-additional:var(--neutral-400);

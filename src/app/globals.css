@@ -17,6 +17,13 @@ body {
  
 }
 
+@media (min-width: 1024px) {
+  body{
+    width: calc(100% + 20px);  
+    }
+}
+
+
 * {
   box-sizing: border-box;
   padding: 0;

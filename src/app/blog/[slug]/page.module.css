@@ -1,0 +1,22 @@
+.postContainer {
+  padding-top: 32px;
+  padding-bottom: 24px;
+}
+
+.postContainer > h1 {
+  margin-bottom: 16px;
+}
+
+.postContainer > span {
+  display: block;
+  color: var(--txt-additional);
+  margin-bottom: 16px;
+}
+
+.sectionContent {
+}
+
+.sectionContent hr {
+margin-top: 15px;
+margin-bottom: 15px;    
+}
