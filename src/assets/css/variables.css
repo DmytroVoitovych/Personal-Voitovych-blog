@@ -36,6 +36,13 @@
     /* Red Colors */
     --red-600: #D92D20;
     --red-400: #F04438;
+    --tag-cl: #FF5100;
+    --attr-name:#A138FF;
+    --attr-equale:#4B4D65;
+    --attr-value:#1975FB;
+    --code-content:#4B4D65;
+    --property-css:#1975FB;
+    --value-css:#FF5100;
 
     --tip-bg:var(--green-700);
     --warning-bg: var(--yellow-700);
@@ -49,6 +56,7 @@
     --bg-hover:var(--neutral-200);
     --bg-btn:var(--blue-500);
     --bg-btn-hover:var(--blue-700);
+    --bg-code: var(--neutral-200);
 
     --bor-cl:var(--neutral-200);
     --bor-input: var(--neutral-300);
@@ -67,10 +75,19 @@
 
 
   :root.dark{
+    --tag-cl:#FC6774;
+    --attr-name:#D390F3;
+    --attr-equale:var(--neutral-0);
+    --attr-value:#68E0FF;
+    --code-content:var(--neutral-0);
+    --property-css:#68E0FF;
+    --value-css:#FC6774;
+
     --bg-main:var(--neutral-900);
     --bg-extra:var(--neutral-800);  
     --bg-btn-menu:var(--neutral-50);
     --bg-hover:var(--neutral-700);
+    --bg-code: var(--neutral-800);
 
     --bor-cl:var(--neutral-700);
     --bor-input: var(--neutral-600);
