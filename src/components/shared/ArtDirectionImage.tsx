@@ -3,11 +3,14 @@ import smallImg from "@/assets/images/image-workspace-small.jpg";
 import largeImg from "@/assets/images/image-workspace-large.jpg";
 
 interface ArtDirectionImageProps {
-    className: string;
- }
+  className: string;
+}
 
-export default function ArtDirectionImage({className}:ArtDirectionImageProps) {
-  const common = { alt: "working room  with white table and computer", sizes: "auto" };
+export default function ArtDirectionImage({ className }: ArtDirectionImageProps) {
+  const common = {
+    alt: "working room  with white table and computer",
+    sizes: "auto",
+  };
   const {
     props: { srcSet: desktop },
   } = getImageProps({
