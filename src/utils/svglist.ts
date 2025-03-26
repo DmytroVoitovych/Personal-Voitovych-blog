@@ -6,7 +6,8 @@ import LogoX from '@/assets/images/logo-x.svg';
 import LogoGithub from '@/assets/images/logo-github.svg';
 import LogoLinkedin from '@/assets/images/logo-linkedin.svg';
 import LogoMentor from '@/assets/images/logo-frontend-mentor.svg'
+import LogoTip from '@/assets/images/icon-tip.svg';
+import WarningTip from '@/assets/images/icon-warning.svg';
+import InformationTip from '@/assets/images/icon-info.svg';
 
-
-
-export {Menu,Close,Moon,Sun,LogoX,LogoGithub,LogoLinkedin,LogoMentor};
+export {Menu,Close,Moon,Sun,LogoX,LogoGithub,LogoLinkedin,LogoMentor,LogoTip,WarningTip,InformationTip};

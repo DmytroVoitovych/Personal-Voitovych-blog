@@ -1,6 +1,7 @@
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { MDXRemoteProps } from "next-mdx-remote/rsc";
+import { NotsLogo } from "./ConditionalLogoNotes";
 
 type MDXComponents = MDXRemoteProps["components"];
 
@@ -13,7 +14,14 @@ const components: MDXComponents = {
   ol: (props) => <ol {...props} className="dy-ol" />,
   li: (props) => <li {...props} />,
   blockquote: (props) => <blockquote {...props} className="text-preset-7 dy-q" />,
-  strong: (props) => <strong {...props} className="text-preset-7-semibold" />,
+  strong: ({children}) =>{
+    const transformStr = (str:string)=>   str.replace(':','').toLowerCase();
+    const regex = /(Tip:|Warning:|Information:)/;
+    const result = regex.exec(children);
+    const createClass = result ? `${transformStr(result[0])} text-preset-5` : 'text-preset-7-semibold';
+    const cl = result ? transformStr(result[0]): '';
+   
+    return <><NotsLogo cl={cl}/>  <strong className={` ${createClass}`}  >{children}</strong></>},
   em: (props) => <em {...props} className="dy-em" />,
   a: (props) => <a {...props} />,
   code: ({ className, children }) => {
