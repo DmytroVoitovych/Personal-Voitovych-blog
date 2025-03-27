@@ -79,6 +79,8 @@
 
    --shadow: 0 6px 10px 0 rgba(123, 123, 123, 0.03); 
    --popup-shadow: 0 8px 15px 0 rgba(8, 6, 25, 0.06);
+   --err-cl:var(--red-600);
+   --success-cl:var(--green-700);
   }
 
 
@@ -123,6 +125,8 @@
     --popup-shadow: 0 8px 15px 0 rgba(8, 6, 25, 0.06);
 
     --accent-cl: var(--blue-700);
+    --err-cl:var(--red-400);
+    --success-cl:var(--green-500);
   }
 
 

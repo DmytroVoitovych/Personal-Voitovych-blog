@@ -9,5 +9,7 @@ import LogoMentor from '@/assets/images/logo-frontend-mentor.svg'
 import LogoTip from '@/assets/images/icon-tip.svg';
 import WarningTip from '@/assets/images/icon-warning.svg';
 import InformationTip from '@/assets/images/icon-info.svg';
+import IconErr from '@/assets/images/icon-error.svg'
+import IconSuccess from '@/assets/images/icon-success.svg'
 
-export {Menu,Close,Moon,Sun,LogoX,LogoGithub,LogoLinkedin,LogoMentor,LogoTip,WarningTip,InformationTip};
+export {Menu,Close,Moon,Sun,LogoX,LogoGithub,LogoLinkedin,LogoMentor,LogoTip,WarningTip,InformationTip,IconErr,IconSuccess};

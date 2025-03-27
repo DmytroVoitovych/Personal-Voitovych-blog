@@ -4,20 +4,26 @@ import styles from "./FormComponent.module.css";
 import { sendMail } from "./mailer/sendMail";
 import { Submit } from "./SubmitComponent";
 import { useState } from "react";
+import { MailError } from "./InputErrComponent";
 
 export default function NewsForm() {
- const [err,showErr] = useState<boolean>(false);   
+  const [err, showErr] = useState<boolean>(false);
+  const [success, setSuccess] = useState<boolean>(false);
 
- const emailValidation = (e)=> {
-    if(!e.target.value)return;
-    showErr(!e.target.checkValidity());}
+  const emailValidation = (e) => {
+    if (!e.target.value) return;
+    showErr(!e.target.checkValidity());
+  };
 
   const subscribeByEmail = (formData: FormData) => {
     const email = formData.get("email") as string | null;
     if (email)
       sendMail(email.trim())
-        .then(() => console.log("Success"))
-        .catch((err) => console.log("Subscription failure", err));
+        .then(() => setSuccess(true))
+        .catch((err) => {
+          showErr(true);
+          console.log("Subscription failure", err);
+        });
     else return;
   };
 
@@ -33,11 +39,12 @@ export default function NewsForm() {
           pattern="^\S+@\S+\.\S+$"
           required
           onBlur={emailValidation}
-          onChange={(e)=> !e.target.value && showErr(false)}
+          onChange={(e) => !e.target.value && showErr(false)}
+          onFocus={()=>success && setSuccess(false)}
         />
       </label>
-      {err?<p>Error</p>:<></>}
-      <Submit />
+      <MailError err={err} />
+      <Submit success={success} />
       <p className="text-preset-8">Unsubscribe anytime. No spam, I promise 🙂</p>
     </Form>
   );
