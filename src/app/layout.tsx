@@ -41,7 +41,7 @@ const dmSans = localFont({
     },
   ],
   variable: "--font-dmSans",
-  preload: true,
+  preload: false,
 });
 
 const firaCode = localFont({
