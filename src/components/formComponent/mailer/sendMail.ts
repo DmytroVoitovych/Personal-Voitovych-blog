@@ -7,7 +7,8 @@ import { getDataViaSupabase } from "@/utils/supabase/helper";
 
 export async function renderEmailComponent(): Promise<string> {
   const { data: article } = await (await getDataViaSupabase()).supabase
-    .order("publishedAt", { ascending: false }).limit(1)
+    .order("publishedAt", { ascending: false })
+    .limit(1)
     .single();
 
   const htmlString = await render(Email(article?.content || "no data"), {

@@ -3,9 +3,9 @@
   padding-bottom: 16px;
 }
 
-.sectionAbout  h1 {
+.sectionAbout h1 {
   text-decoration: underline;
-  text-decoration-color: var(--accent-cl); 
+  text-decoration-color: var(--accent-cl);
   text-decoration-skip-ink: none;
   text-decoration-thickness: 8px;
   text-underline-offset: -1px;
@@ -13,61 +13,66 @@
 }
 
 .sectionAbout h1 + p {
-margin-bottom: 32px;  
-} 
+  margin-bottom: 32px;
+}
 
-.sectionAbout div > p:first-child{
-  margin-bottom: 32px;  
-  } 
+.sectionAbout div > p:first-child {
+  margin-bottom: 32px;
+}
 
 .sectionAbout h1 ~ * {
- color: var(--txt-additional);
-  } 
+  color: var(--txt-additional);
+}
 
-.listBlock{
-margin-bottom: 24px; 
-}  
+.listBlock {
+  margin-bottom: 24px;
+}
 
-  .citeList{
- display: grid;   
- list-style: unset; 
- margin-left: 16px;
- margin-bottom: 32px;
-  }
+.citeList {
+  display: grid;
+  list-style: unset;
+  margin-left: 16px;
+  margin-bottom: 32px;
+}
 
-  .picture{
-  border-radius: 10px;  
+.picture {
+  border-radius: 10px;
   overflow: hidden;
   margin-bottom: 24px;
-  }
+}
 
-  .picture + p{
-  margin-bottom: 24px;  
-  }
+.picture + p {
+  margin-bottom: 24px;
+}
 
-  .socialBlock{
-    display: grid;
-    row-gap: 16px;
-    margin-bottom: 24px;
-    
-  }
+.socialBlock {
+  display: grid;
+  row-gap: 16px;
+  margin-bottom: 24px;
+}
 
-  .socialBlock strong{
-    color: var(--txt-main);
-  }
+.socialBlock strong {
+  color: var(--txt-main);
+}
 
-  .aboutLink{
-    display: flex;
-    gap: 12px;
+.aboutLink {
+  display: flex;
+  gap: 12px;
+}
+
+.aboutLink > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--bor-cl);
+  background-color: var(--bg-extra);
+  fill: var(--txt-main);
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--bg-hover);
     }
-  
-   .aboutLink > li > a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px;
-    border-radius: 10px;
-    border: 1px solid var(--bor-cl);
-    background-color: var(--bg-extra);
-    fill: var(--txt-main);
-   }
+  }
+}

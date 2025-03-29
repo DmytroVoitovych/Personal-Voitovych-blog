@@ -15,20 +15,12 @@ export const SocialLink = ({ className, width, height }: SocialLinkProps) => {
         </a>
       </li>
       <li>
-        <a
-          rel="noreferrer"
-          target="_blank"
-          href="https://github.com/DmytroVoitovych"
-        >
+        <a rel="noreferrer" target="_blank" href="https://github.com/DmytroVoitovych">
           <LogoGithub width={width} height={height} />
         </a>
       </li>
       <li>
-        <a
-          rel="noreferrer"
-          target="_blank"
-          href="https://www.linkedin.com/in/dmytro-voitovych/"
-        >
+        <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/dmytro-voitovych/">
           <LogoLinkedin width={width} height={height} />
         </a>
       </li>

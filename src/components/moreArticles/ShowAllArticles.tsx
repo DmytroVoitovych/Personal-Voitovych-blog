@@ -7,13 +7,13 @@ export const ShowAllArticles = () => {
 
   return (
     <label htmlFor="showArticles" className={`${styles.showArticles} text-preset-6`}>
-      View {checked?'less':'all'} articles
+      View {checked ? "less" : "all"} articles
       <input
         type="checkbox"
         name="showArticles"
         id="showArticles"
         checked={checked}
-        onChange={()=>setChecked(prev=>!prev)}
+        onChange={() => setChecked((prev) => !prev)}
       />
     </label>
   );

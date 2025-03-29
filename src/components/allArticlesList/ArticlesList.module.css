@@ -11,19 +11,30 @@
   color: var(--txt-main);
 }
 
+.allArticlesList {
+  @media (hover: hover) {
+    li:has(a:hover) {
+      background-color: var(--bg-hover);
+      transition: all 250ms ease-in-out;
+    }
+  }
+}
+
 .allArticlesList span {
-  display: block;  
+  display: block;
   color: var(--txt-additional);
 }
 
-.allArticlesList span:has(+p) {
-  margin-bottom: 8px;  
-  }
+.allArticlesList span:has(+ p) {
+  margin-bottom: 8px;
+}
 
 .allArticlesList li:nth-child(5) ~ li {
   height: auto;
   opacity: 1;
-  transition: height 250ms ease-in-out, opacity 250ms ease-in-out,
+  transition:
+    height 250ms ease-in-out,
+    opacity 250ms ease-in-out,
     display 249ms allow-discrete ease-in-out;
 
   @starting-style {
@@ -36,9 +47,12 @@
   display: none;
   height: 0;
   opacity: 0;
-  transition: height 250ms ease-in-out, opacity 150ms ease-in-out,display 250ms allow-discrete ease-in-out;
+  transition:
+    height 250ms ease-in-out,
+    opacity 150ms ease-in-out,
+    display 250ms allow-discrete ease-in-out;
 }
 
 .allArticlesList p {
-   color: var(--txt-additional);
-  }
+  color: var(--txt-additional);
+}

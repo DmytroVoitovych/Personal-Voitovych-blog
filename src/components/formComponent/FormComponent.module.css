@@ -13,12 +13,12 @@
 }
 
 .form:has([data-err]) input {
-    border-color: var(--err-cl);
-  }
+  border-color: var(--err-cl);
+}
 
-  .form:has([data-success]) input {
-    border-color: var(--success-cl);
-  }
+.form:has([data-success]) input {
+  border-color: var(--success-cl);
+}
 
 .form input {
   color: var(--txt-main);
@@ -83,6 +83,15 @@
 }
 
 .form [data-success] {
-    fill: var(--success-cl);
-    color: var(--success-cl);
+  fill: var(--success-cl);
+  color: var(--success-cl);
+}
+
+.form [disabled] {
+  background-color: var(--bg-hover);
+
+  &:hover {
+    background-color: var(--bg-hover);
+    cursor: auto;
   }
+}

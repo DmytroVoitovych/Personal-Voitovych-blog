@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 const NavComponent = ({ mobile }: { mobile: boolean }) => {
   const pathname = usePathname();
-  
+
   const isActive = (linkName: string): string | "activeLink" =>
     pathname === linkName ? styles?.activeLink || "" : "";
 

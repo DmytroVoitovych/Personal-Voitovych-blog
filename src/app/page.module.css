@@ -1,11 +1,10 @@
-
-.hero{
-padding: 32px 0;  
+.hero {
+  padding: 32px 0;
 }
 
-.hero  h1 {
+.hero h1 {
   text-decoration: underline;
-  text-decoration-color: var(--accent-cl); 
+  text-decoration-color: var(--accent-cl);
   text-decoration-skip-ink: none;
   text-decoration-thickness: 8px;
   text-underline-offset: -1px;
@@ -13,17 +12,17 @@ padding: 32px 0;
 }
 
 .hero h1 + p {
-margin-bottom: 24px;
-color: var(--txt-additional);
+  margin-bottom: 24px;
+  color: var(--txt-additional);
 }
 
-.heroLink{
+.heroLink {
   display: flex;
   gap: 12px;
   margin-bottom: 32px;
- }
+}
 
- .heroLink > li > a{
+.heroLink > li > a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,22 +31,29 @@ color: var(--txt-additional);
   border: 1px solid var(--bor-cl);
   background-color: var(--bg-extra);
   fill: var(--txt-main);
- }
+  transition: backgroundColor 250ms ease-in-out;
 
-.latestArticles{
-padding-bottom: 16px;  
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--bg-hover);
+    }
+  }
+}
+
+.latestArticles {
+  padding-bottom: 16px;
 }
 
 .latestArticles h2 {
-margin-bottom: 32px;
-display: flex;
-align-items: baseline;
-gap: 10px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
 }
 
-.latestArticles h2::after{
-content: '';
-width: 40px;
-height: 3px;
-background-color: var(--accent-cl); 
+.latestArticles h2::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: var(--accent-cl);
 }

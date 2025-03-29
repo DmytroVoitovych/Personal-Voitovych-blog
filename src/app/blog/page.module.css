@@ -21,20 +21,20 @@
   background-color: var(--accent-cl);
 }
 
-.sectionBlog  h1 + p {
-color: var(--txt-additional);
-margin-bottom: 24px;
+.sectionBlog h1 + p {
+  color: var(--txt-additional);
+  margin-bottom: 24px;
 }
 
-.sectionBlog > ul{
-gap: 0;  
+.sectionBlog > ul {
+  gap: 0;
 }
 
 .sectionBlog > ul > li {
   padding-top: 20px;
-  }
+}
 
 .sectionBlog > ul > li:not(:last-child) {
-padding-bottom: 20px;
-border-bottom: 1px solid var(--bor-cl);
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--bor-cl);
 }

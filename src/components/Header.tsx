@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import avatar from "@/assets/images/avatar.jpeg";
@@ -22,13 +22,13 @@ const Header = () => {
         quality={100}
       />
       <div className={styles.rightBlock}>
-        <NavComponent mobile={false}  />
+        <NavComponent mobile={false} />
         <button
           type="button"
           className={styles.menuButton}
           onClick={() => setShow((prev) => !prev)}
         >
-         {show?<Close/>: <Menu />}
+          {show ? <Close /> : <Menu />}
         </button>
         <ThemeSwitcher />
       </div>

@@ -136,17 +136,16 @@
     line-height: 1;
   }
 
-  svg{
-   position: absolute;
-   top: 12px;
-   left: 12px; 
-
+  svg {
+    position: absolute;
+    top: 12px;
+    left: 12px;
   }
 
-  em{
-  display: contents;  
+  em {
+    display: contents;
   }
- 
+
   p {
     display: flex;
     flex-wrap: wrap;
@@ -160,27 +159,27 @@
   background-color: var(--tip-bg);
   border-color: var(--tip-bor);
 
-  svg{
-   fill: var(--tip-fill);    
-   }
+  svg {
+    fill: var(--tip-fill);
+  }
 }
 
 .dy-q:has(.warning) {
   background-color: var(--warning-bg);
   border-color: var(--warning-bor);
 
-  svg{
-    fill: var(--warning-fill);    
-    }
+  svg {
+    fill: var(--warning-fill);
+  }
 }
 
 .dy-q:has(.information) {
   background-color: var(--information-bg);
   border-color: var(--information-bor);
 
-  svg{
-    fill: var(--information-fill);    
-    }
+  svg {
+    fill: var(--information-fill);
+  }
 }
 
 .dy-q p {
@@ -266,7 +265,6 @@
   font-family: var(--font-firaCode);
   padding: 12px;
   border-radius: 12px;
- 
 
   :is(.token.tag, .token.doctype) {
     color: var(--tag-cl);
@@ -274,7 +272,6 @@
 
   code[class*="language-"] {
     background-color: inherit;
-   
   }
 
   code {

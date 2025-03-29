@@ -3,19 +3,19 @@ import Form from "next/form";
 import styles from "./FormComponent.module.css";
 import { sendMail } from "./mailer/sendMail";
 import { Submit } from "./SubmitComponent";
-import { useState } from "react";
+import { FocusEvent, useState } from "react";
 import { MailError } from "./InputErrComponent";
 
 export default function NewsForm() {
   const [err, showErr] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
 
-  const emailValidation = (e) => {
+  const emailValidation = (e: FocusEvent<HTMLInputElement>): void => {
     if (!e.target.value) return;
     showErr(!e.target.checkValidity());
   };
 
-  const subscribeByEmail = (formData: FormData) => {
+  const subscribeByEmail = (formData: FormData): void => {
     const email = formData.get("email") as string | null;
     if (email)
       sendMail(email.trim())
@@ -40,7 +40,7 @@ export default function NewsForm() {
           required
           onBlur={emailValidation}
           onChange={(e) => !e.target.value && showErr(false)}
-          onFocus={()=>success && setSuccess(false)}
+          onFocus={() => success && setSuccess(false)}
         />
       </label>
       <MailError err={err} />

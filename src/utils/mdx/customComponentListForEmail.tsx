@@ -98,9 +98,7 @@ const components: MDXComponents = {
   h3: (props) => <h3 {...props} style={textPresets.preset3} />,
   p: (props) => <p {...props} style={textPresets.preset7} />,
   ul: (props) => <ul {...props} style={textPresets.dyUl} />,
-  ol: (props) => (
-    <ol {...props} style={{ ...textPresets.dyUl, listStyle: "decimal" }} />
-  ),
+  ol: (props) => <ol {...props} style={{ ...textPresets.dyUl, listStyle: "decimal" }} />,
   li: (props) => <li {...props} />,
   blockquote: (props) => <blockquote {...props} style={textPresets.preset7} />,
   strong: ({ children }) => {
@@ -119,9 +117,7 @@ const components: MDXComponents = {
     );
   },
   em: (props) => <em {...props} style={{ fontWeight: "600" }} />,
-  a: (props) => (
-    <a {...props} style={{ ...textPresets.preset7, ...textPresets.dyA }} />
-  ),
+  a: (props) => <a {...props} style={{ ...textPresets.preset7, ...textPresets.dyA }} />,
   code: ({ className, children }) => {
     const match = /language-(\w+)/.exec(className || "");
     return match ? (

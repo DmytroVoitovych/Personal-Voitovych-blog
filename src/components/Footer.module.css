@@ -1,25 +1,22 @@
-
-
-
-.footer{
-display: flex;
-justify-content: space-between;
-align-items: center;    
-padding-left: 14px;
-padding-right: 14px; 
-color: var(--txt-additional);   
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 14px;
+  padding-right: 14px;
+  color: var(--txt-additional);
 }
 
-.footerLink{
-    display: flex;
-    gap: 16px;
-    }
-  
-   .footerLink > li > a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    background-color: unset;
-    fill: var(--txt-main);
-   }
+.footerLink {
+  display: flex;
+  gap: 16px;
+}
+
+.footerLink > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: unset;
+  fill: var(--txt-main);
+}

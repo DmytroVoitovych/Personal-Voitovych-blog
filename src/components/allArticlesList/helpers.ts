@@ -21,5 +21,5 @@ const getTransformedMonth = (month: string): string =>
 export const getLocalDate = (date: string): string =>
   `${getTransformedMonth(createDate(month, date))} ${createDate(
     day,
-    date
+    date,
   )}, ${createDate(year, date)}`;

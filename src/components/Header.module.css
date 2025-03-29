@@ -16,10 +16,12 @@
   height: 0;
   display: none;
   opacity: 0;
-  transition: height 250ms ease-in-out, opacity 250ms ease-in-out,
+  transition:
+    height 250ms ease-in-out,
+    opacity 250ms ease-in-out,
     display 250ms allow-discrete;
 
-   @media (max-width: 639.9px) {
+  @media (max-width: 639.9px) {
     @starting-style {
       height: auto;
       opacity: 1;
@@ -31,7 +33,9 @@
   display: grid;
   height: auto;
   opacity: 1;
-  transition: height 250ms ease-in-out, opacity 250ms ease-in-out,
+  transition:
+    height 250ms ease-in-out,
+    opacity 250ms ease-in-out,
     display 249ms allow-discrete;
 
   @media (min-width: 640px) {
@@ -52,11 +56,11 @@
   border-radius: 10px;
 }
 
-.header[data-menu="true"] .menuButton{
-padding: 10px;  
-border-radius: 10px;
-background-color: var(--bg-btn-menu);
-stroke: var(--txt-btn-menu);
+.header[data-menu="true"] .menuButton {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--bg-btn-menu);
+  stroke: var(--txt-btn-menu);
 }
 
 .menuButton {

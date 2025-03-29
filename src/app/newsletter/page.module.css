@@ -1,18 +1,17 @@
-
-.newsSection{
-padding: 32px 0;  
+.newsSection {
+  padding: 32px 0;
 }
 
-.newsSection  h1 {
- margin-bottom: 16px;
+.newsSection h1 {
+  margin-bottom: 16px;
 }
 
 .newsSection h1 + p {
-margin-bottom: 16px;
-color: var(--txt-additional);
+  margin-bottom: 16px;
+  color: var(--txt-additional);
 }
 
-.newsSection strong{
-display: block;  
-margin-bottom: 24px;  
+.newsSection strong {
+  display: block;
+  margin-bottom: 24px;
 }
