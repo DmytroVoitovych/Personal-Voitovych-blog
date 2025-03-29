@@ -1,10 +1,11 @@
 "use server";
-
+// export const dynamic = 'force-static';
 import styles from "./page.module.css";
 import { getLocalDate } from "@/components/allArticlesList/helpers";
 import { MdHandledComponent } from "@/utils/mdx/MdHandledComponent";
 import components from "@/utils/mdx/customComponentsList";
 import { getDataViaSupabase } from "@/utils/supabase/helper";
+
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;

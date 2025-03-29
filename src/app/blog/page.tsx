@@ -9,6 +9,8 @@ const blogDatabaseQuery: ["title", "id", "publishedAt", "slug", "description"] =
   "description",
 ];
 
+
+
 const Blog = () => {
   return (
     <section className={`${styles.sectionBlog} text-preset-2`}>

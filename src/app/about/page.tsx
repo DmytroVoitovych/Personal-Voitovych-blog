@@ -2,7 +2,7 @@ import { SocialLink } from "@/components/shared/SocialLink";
 import styles from "./page.module.css";
 import ArtDirectionImage from "@/components/shared/ArtDirectionImage";
 
-const About = () => {
+export default function About() {
   return (
     <section className={styles.sectionAbout}>
       <h1 className="text-preset-2">About Me</h1>
@@ -61,6 +61,4 @@ const About = () => {
       <hr className="divider" />
     </section>
   );
-};
-
-export default About;
+}

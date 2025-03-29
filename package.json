@@ -2,6 +2,7 @@
   "name": "personal-voitovych-blog",
   "version": "0.1.0",
   "private": true,
+  
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -34,5 +35,8 @@
     "eslint-config-next": "15.2.0",
     "supabase": "^2.19.7",
     "typescript": "^5"
-  }
+  },
+  "engines": {
+  "node": ">=20.0.0"
+}
 }

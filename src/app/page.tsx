@@ -11,6 +11,8 @@ const homeDatabaseQuery: ["title", "id", "publishedAt", "slug"] = [
   "slug",
 ];
 
+
+
 export default function Home() {
   return (
     <>

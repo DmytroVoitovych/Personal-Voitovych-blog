@@ -5,6 +5,8 @@ import Header from "@/components/Header";
 import NavComponent from "@/components/navComponent/NavComponent";
 import { Footer } from "@/components/Footer";
 
+export const dynamic = "force-dynamic";
+
 const dmSans = localFont({
   src: [
     {

@@ -3,8 +3,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  
   experimental:{
+  
+  
     turbo: {
+      
       rules: {
         '*.svg': {
           loaders: ['@svgr/webpack'],
@@ -15,7 +19,7 @@ const nextConfig: NextConfig = {
   },
   transpilePackages: ['next-mdx-remote'],
 
-
+  
 };
 
 export default nextConfig;
