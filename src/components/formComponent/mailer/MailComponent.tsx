@@ -1,6 +1,6 @@
 import components from "@/utils/mdx/customComponentListForEmail";
 import { MdHandledComponent } from "@/utils/mdx/MdHandledComponent";
-import {Html, Head, Font, Body, Container } from "@react-email/components";
+import {Html, Head, Font, Body, Container, Text } from "@react-email/components";
 
 export const Email = (article:string) => {
   return (
@@ -28,6 +28,7 @@ export const Email = (article:string) => {
     <Body>
      <Container style={{maxWidth:'700px'}}>
     <MdHandledComponent source={article} components={components}/>
+    <Text style={{padding:'12px',backgroundColor:'#E1F1FE',borderRadius:'12px',border:'1px solid #93CEFC'}}>{"Don't worry I am not going to send you spams! This is first and last my mail to you."}</Text>
     </Container>   
     </Body>
      

@@ -1,26 +1,20 @@
-'use server'
-import { createClient } from "@/utils/supabase/server";
+"use server";
 import Link from "next/link";
 import styles from "./ArticlesList.module.css";
 import { getLocalDate } from "./helpers";
-import { Database } from "../../../database.types";
-
-type ArticleKeys = keyof Database["public"]["Tables"]["Developers articles"]["Row"];
-type RowData = Database["public"]["Tables"]["Developers articles"]["Row"];
-interface ArticlesListProps {
-  query?: ArticleKeys[];
-  
-};
-
+import { getDataViaSupabase } from "@/utils/supabase/helper";
+import { ArticlesListProps } from "@/utils/supabase/types";
 
 export const ArticlesList = async ({ query }: ArticlesListProps) => {
-  const queryReq = query?.join(",");
+  const { data: articles } = query?.includes("description")
+    ? await (
+        await getDataViaSupabase(query)
+      ).supabase
+    : await (
+        await getDataViaSupabase(query)
+      ).supabase.order("publishedAt", { ascending: false });
 
-  const supabase = await createClient();
-
-  const { data: articles } = await supabase
-    .from("Developers articles")
-    .select<string, Pick<RowData, ArticleKeys>>(queryReq || "*");
+ if (!articles)return <p>You do not have any post</p>;   
 
   return (
     <ul className={styles.allArticlesList}>
@@ -32,7 +26,11 @@ export const ArticlesList = async ({ query }: ArticlesListProps) => {
           <span className="text-preset-8-italic">
             {getLocalDate(post.publishedAt!)}
           </span>
-          {post?.description ? <p className="text-preset-7">{post.description}</p> : <></>}
+          {post?.description ? (
+            <p className="text-preset-7">{post.description}</p>
+          ) : (
+            <></>
+          )}
         </li>
       ))}
     </ul>

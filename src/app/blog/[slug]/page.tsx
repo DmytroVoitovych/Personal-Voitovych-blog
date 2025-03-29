@@ -1,13 +1,10 @@
 "use server";
 
-import { createClient } from "@/utils/supabase/server";
 import styles from "./page.module.css";
 import { getLocalDate } from "@/components/allArticlesList/helpers";
 import { MdHandledComponent } from "@/utils/mdx/MdHandledComponent";
-import { renderEmailComponent } from "@/components/formComponent/mailer/sendMail";
 import components from "@/utils/mdx/customComponentsList";
-
-
+import { getDataViaSupabase } from "@/utils/supabase/helper";
 
 export default async function Page({
   params,
@@ -15,14 +12,9 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const supabase = await createClient();
-  const { data: article } = await supabase
-    .from("Developers articles")
-    .select("*")
+  const { data: article } = await (await getDataViaSupabase()).supabase
     .eq("slug", slug)
     .maybeSingle();
-
-
 
   return (
     <article className={styles.postContainer}>
@@ -33,7 +25,10 @@ export default async function Page({
       </span>
 
       <section className={styles.sectionContent}>
-        <MdHandledComponent source={article?.content || "no data"} components={components} />
+        <MdHandledComponent
+          source={article?.content || "no data"}
+          components={components}
+        />
       </section>
     </article>
   );
