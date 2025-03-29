@@ -1,7 +1,13 @@
+"use server";
+
 import { createClient } from "@/utils/supabase/server";
 import styles from "./page.module.css";
 import { getLocalDate } from "@/components/allArticlesList/helpers";
 import { MdHandledComponent } from "@/utils/mdx/MdHandledComponent";
+import { renderEmailComponent } from "@/components/formComponent/mailer/sendMail";
+import components from "@/utils/mdx/customComponentsList";
+
+
 
 export default async function Page({
   params,
@@ -16,6 +22,8 @@ export default async function Page({
     .eq("slug", slug)
     .maybeSingle();
 
+
+
   return (
     <article className={styles.postContainer}>
       <h1 className="text-preset-1"> {article?.title}</h1>
@@ -25,7 +33,7 @@ export default async function Page({
       </span>
 
       <section className={styles.sectionContent}>
-        <MdHandledComponent source={article?.content || "no data"} />
+        <MdHandledComponent source={article?.content || "no data"} components={components} />
       </section>
     </article>
   );

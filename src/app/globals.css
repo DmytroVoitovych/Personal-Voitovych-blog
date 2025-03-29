@@ -53,6 +53,7 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 [data-menu="true"] + .innerWrapper {

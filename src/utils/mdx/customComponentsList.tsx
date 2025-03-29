@@ -6,7 +6,7 @@ import { NotsLogo } from "./ConditionalLogoNotes";
 type MDXComponents = MDXRemoteProps["components"];
 
 const components: MDXComponents = {
-  h1: (props) => <h1 {...props} className="text-preset-1" />,
+  h1: (props) => <h1 {...props} className="text-preset-1"  />,
   h2: (props) => <h2 {...props} className="text-preset-3 dy-h2-h3" />,
   h3: (props) => <h3 {...props} className="text-preset-3 dy-h2-h3" />,
   p: (props) => <p {...props} className="text-preset-7 dy-p" />,

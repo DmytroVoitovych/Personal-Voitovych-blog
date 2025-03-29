@@ -1,14 +1,21 @@
-import { MDXRemote} from "next-mdx-remote/rsc";
+import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import "prismjs/themes/prism-tomorrow.css";
-import components from "./customComponentsList";
+import { MDXRemoteProps } from "next-mdx-remote";
 
+type MDXComponents = MDXRemoteProps["components"];
 
-export function MdHandledComponent({ source }: { source: string }) {
+export function MdHandledComponent({
+  source,
+  components,
+}: {
+  source: string;
+  components: MDXComponents;
+}) {
   return (
     <MDXRemote
       source={source}
-      components={{ ...components}}
+      components={{ ...components }}
       options={{
         mdxOptions: {
           remarkPlugins: [remarkGfm],

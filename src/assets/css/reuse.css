@@ -266,6 +266,7 @@
   font-family: var(--font-firaCode);
   padding: 12px;
   border-radius: 12px;
+ 
 
   :is(.token.tag, .token.doctype) {
     color: var(--tag-cl);
@@ -273,6 +274,7 @@
 
   code[class*="language-"] {
     background-color: inherit;
+   
   }
 
   code {
@@ -281,6 +283,7 @@
 
   span {
     color: var(--code-content);
+    text-wrap: auto;
   }
 
   .token.attr-name {
