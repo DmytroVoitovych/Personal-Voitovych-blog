@@ -8,6 +8,7 @@ import { getDataViaSupabase } from "@/utils/supabase/helper";
 
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+    console.log(params,'params debug');
   const { slug } = await params;
   const { data: article } = await (await getDataViaSupabase()).supabase
     .eq("slug", slug)

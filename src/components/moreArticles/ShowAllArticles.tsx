@@ -2,7 +2,7 @@
 import { useState } from "react";
 import styles from "./ShowAllArticles.module.css";
 
-export const ShowAllArticles = () => {
+ const ShowAllArticles = () => {
   const [checked, setChecked] = useState<boolean>(false);
 
   return (
@@ -18,3 +18,5 @@ export const ShowAllArticles = () => {
     </label>
   );
 };
+
+export default ShowAllArticles;

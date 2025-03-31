@@ -1,7 +1,7 @@
 import { useFormStatus } from "react-dom";
-import { MailSuccess } from "./InputSuccessComponent";
+import  MailSuccess  from "./InputSuccessComponent";
 
-export const Submit = ({ success }: { success: boolean }) => {
+ const Submit = ({ success }: { success: boolean }) => {
   const { pending } = useFormStatus();
 
   return (
@@ -13,3 +13,5 @@ export const Submit = ({ success }: { success: boolean }) => {
     </>
   );
 };
+
+export default Submit;

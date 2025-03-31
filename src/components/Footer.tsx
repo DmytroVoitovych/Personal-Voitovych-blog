@@ -1,7 +1,7 @@
 import styles from "./Footer.module.css";
-import { SocialLink } from "./shared/SocialLink";
+import  SocialLink  from "./shared/SocialLink";
 
-export const Footer = () => {
+ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <p className="text-preset-8">Made with ❤️ and ☕️</p>
@@ -9,3 +9,6 @@ export const Footer = () => {
     </footer>
   );
 };
+
+
+export default Footer;

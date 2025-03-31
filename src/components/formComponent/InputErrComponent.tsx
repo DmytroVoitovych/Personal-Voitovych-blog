@@ -1,6 +1,6 @@
 import { IconErr } from "@/utils/svglist";
 
-export const MailError = ({ err }: { err: boolean }) =>
+const MailError = ({ err }: { err: boolean }) =>
   err ? (
     <p data-err>
       <IconErr />
@@ -9,3 +9,6 @@ export const MailError = ({ err }: { err: boolean }) =>
   ) : (
     <></>
   );
+
+
+  export  default MailError;

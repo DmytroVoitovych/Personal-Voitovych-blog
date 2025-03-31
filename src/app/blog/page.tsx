@@ -1,4 +1,4 @@
-import { ArticlesList } from "@/components/allArticlesList/ArticlesList";
+import  ArticlesList  from "@/components/allArticlesList/ArticlesList";
 import styles from "./page.module.css";
 
 const blogDatabaseQuery: ["title", "id", "publishedAt", "slug", "description"] = [

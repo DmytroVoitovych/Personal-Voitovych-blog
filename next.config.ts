@@ -1,25 +1,19 @@
 import type { NextConfig } from "next";
 
-
 const nextConfig: NextConfig = {
   /* config options here */
-  output:'standalone',
-  experimental:{
-  
-  
+
+  experimental: {
     turbo: {
-      
       rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.ts',
+        "*.svg": {
+          loaders: ["@svgr/webpack"],
+          as: "*.ts",
         },
       },
     },
   },
-  transpilePackages: ['next-mdx-remote'],
-
-  
+  transpilePackages: ["next-mdx-remote"],
 };
 
 export default nextConfig;

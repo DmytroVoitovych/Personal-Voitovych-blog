@@ -1,15 +1,15 @@
 import nodemailer from "nodemailer";
 
-const { NEXT_PASSWORD, NEXT_MAIL_FROM, NEXT_HOST } = process.env;
+const { NEXT_PUBLIC_PASSWORD, NEXT_PUBLIC_MAIL_FROM, NEXT_PUBLIC_HOST } = process.env;
 
 const config = {
-  host: NEXT_HOST,
+  host: NEXT_PUBLIC_HOST,
   port: 465,
   secure: true,
 
   auth: {
-    user: NEXT_MAIL_FROM,
-    pass: NEXT_PASSWORD,
+    user: NEXT_PUBLIC_MAIL_FROM,
+    pass: NEXT_PUBLIC_PASSWORD,
   },
 };
 

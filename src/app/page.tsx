@@ -1,8 +1,8 @@
 // import Image from "next/image";
 import styles from "./page.module.css";
-import { ArticlesList } from "@/components/allArticlesList/ArticlesList";
-import { ShowAllArticles } from "@/components/moreArticles/ShowAllArticles";
-import { SocialLink } from "@/components/shared/SocialLink";
+import  ArticlesList  from "@/components/allArticlesList/ArticlesList";
+import  ShowAllArticles  from "@/components/moreArticles/ShowAllArticles";
+import  SocialLink  from "@/components/shared/SocialLink";
 
 const homeDatabaseQuery: ["title", "id", "publishedAt", "slug"] = [
   "title",

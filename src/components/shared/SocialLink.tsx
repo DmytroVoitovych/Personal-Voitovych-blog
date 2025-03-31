@@ -6,7 +6,7 @@ interface SocialLinkProps {
   height: number;
 }
 
-export const SocialLink = ({ className, width, height }: SocialLinkProps) => {
+ const SocialLink = ({ className, width, height }: SocialLinkProps) => {
   return (
     <ul className={className}>
       <li>
@@ -36,3 +36,5 @@ export const SocialLink = ({ className, width, height }: SocialLinkProps) => {
     </ul>
   );
 };
+
+export default SocialLink;

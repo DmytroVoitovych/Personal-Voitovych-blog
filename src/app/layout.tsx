@@ -3,9 +3,11 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import NavComponent from "@/components/navComponent/NavComponent";
-import { Footer } from "@/components/Footer";
+import  Footer  from "@/components/Footer";
+import { Suspense } from "react";
 
 export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
 
 const dmSans = localFont({
   src: [
@@ -41,12 +43,13 @@ const dmSans = localFont({
     },
   ],
   variable: "--font-dmSans",
-  preload: false,
+  preload: true,
 });
 
 const firaCode = localFont({
   src: "../assets/fonts/Fira_Code/static/FiraCode-Regular.ttf",
   variable: "--font-firaCode",
+  preload:true
 });
 
 export const metadata: Metadata = {
@@ -62,10 +65,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dmSans.variable}${firaCode.variable}`}>
+        
         <div className="wrapper">
           <Header />
           <div className="innerWrapper">
-            <NavComponent mobile={true} />
+            <Suspense>
+            <NavComponent mobile={true} /></Suspense>
             <main>{children}</main>
             <Footer />
           </div>

@@ -1,6 +1,6 @@
 "use server";
 import { transporter } from "./nodemailer";
-const { NEXT_MAIL_FROM } = process.env;
+const { NEXT_PUBLIC_MAIL_FROM } = process.env;
 import { render } from "@react-email/render";
 import { Email } from "./MailComponent";
 import { getDataViaSupabase } from "@/utils/supabase/helper";
@@ -27,7 +27,7 @@ export const sendMail = async (email: string) => {
     if (!h) throw new Error("Incorrect html string");
 
     const data = await transporter.sendMail({
-      from: NEXT_MAIL_FROM,
+      from: NEXT_PUBLIC_MAIL_FROM,
       to: email,
       subject: "BLOG SUBSCRIBING",
       text: "Hello Guest",

@@ -1,6 +1,6 @@
 import { MDXRemoteProps } from "next-mdx-remote/rsc";
 import { NotsLogo } from "./ConditionalLogoNotes";
-import { CodeBlock, dracula, PrismLanguage } from "@react-email/components";
+import { CodeBlock, dracula,PrismLanguage } from '@react-email/code-block';
 
 type MDXComponents = MDXRemoteProps["components"];
 

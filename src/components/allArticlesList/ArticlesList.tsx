@@ -5,7 +5,7 @@ import { getLocalDate } from "./helpers";
 import { getDataViaSupabase } from "@/utils/supabase/helper";
 import { ArticlesListProps } from "@/utils/supabase/types";
 
-export const ArticlesList = async ({ query }: ArticlesListProps) => {
+ const ArticlesList = async ({ query }: ArticlesListProps) => {
   const { data: articles } = query?.includes("description")
     ? await (
         await getDataViaSupabase(query)
@@ -28,3 +28,5 @@ export const ArticlesList = async ({ query }: ArticlesListProps) => {
     </ul>
   );
 };
+
+export default ArticlesList;

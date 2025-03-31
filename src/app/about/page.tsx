@@ -1,4 +1,4 @@
-import { SocialLink } from "@/components/shared/SocialLink";
+import  SocialLink  from "@/components/shared/SocialLink";
 import styles from "./page.module.css";
 import ArtDirectionImage from "@/components/shared/ArtDirectionImage";
 
