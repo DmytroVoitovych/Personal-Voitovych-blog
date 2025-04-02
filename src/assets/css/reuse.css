@@ -297,5 +297,24 @@
 }
 
 .dy-inline-code {
+  display: contents;
   color: var(--property-css);
 }
+
+.dyA {
+  text-decoration: "underline";
+  text-decoration-color: "#93CEFC";
+  text-decoration-skip-ink: "none" as const;
+  text-decoration-thickness: "8px";
+  text-underline-offset: "-1px";
+  margin-bottom: "24px";
+  text-transform: "capitalize";
+}
+
+
+.skeletonBox{
+  display:flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 8px;
+} 

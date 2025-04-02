@@ -27,4 +27,4 @@ const NavComponent = ({ mobile }: { mobile: boolean }) => {
   );
 };
 
-export default NavComponent;
+export { NavComponent };

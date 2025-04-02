@@ -1,4 +1,4 @@
-import  ArticlesList  from "@/components/allArticlesList/ArticlesList";
+import ArticlesList from "@/components/allArticlesList/ArticlesList";
 import styles from "./page.module.css";
 
 const blogDatabaseQuery: ["title", "id", "publishedAt", "slug", "description"] = [
@@ -9,9 +9,7 @@ const blogDatabaseQuery: ["title", "id", "publishedAt", "slug", "description"] =
   "description",
 ];
 
-
-
-const Blog = () => {
+const Page = async () => {
   return (
     <section className={`${styles.sectionBlog} text-preset-2`}>
       <h1>My Articles</h1>
@@ -25,4 +23,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Page;

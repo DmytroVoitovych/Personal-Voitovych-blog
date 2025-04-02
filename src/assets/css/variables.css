@@ -81,6 +81,8 @@
   --popup-shadow: 0 8px 15px 0 rgba(8, 6, 25, 0.06);
   --err-cl: var(--red-600);
   --success-cl: var(--green-700);
+  --skeleton-main-cl: var(--neutral-400);
+  --skeleton-extra-cl: var(--neutral-600);
 }
 
 :root.dark {
@@ -126,4 +128,6 @@
   --accent-cl: var(--blue-700);
   --err-cl: var(--red-400);
   --success-cl: var(--green-500);
+  --skeleton-main-cl: var(--neutral-600);
+  --skeleton-extra-cl: var(--neutral-900);
 }

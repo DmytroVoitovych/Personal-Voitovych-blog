@@ -2,9 +2,9 @@
 import Form from "next/form";
 import styles from "./FormComponent.module.css";
 import { sendMail } from "./mailer/sendMail";
-import  Submit  from "./SubmitComponent";
+import Submit from "./SubmitComponent";
 import { FocusEvent, useState } from "react";
-import  MailError  from "./InputErrComponent";
+import MailError from "./InputErrComponent";
 
 export default function NewsForm() {
   const [err, showErr] = useState<boolean>(false);
@@ -48,4 +48,4 @@ export default function NewsForm() {
       <p className="text-preset-8">Unsubscribe anytime. No spam, I promise 🙂</p>
     </Form>
   );
-}
+};

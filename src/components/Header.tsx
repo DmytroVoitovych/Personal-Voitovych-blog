@@ -3,8 +3,8 @@
 import Image from "next/image";
 import avatar from "@/assets/images/avatar.jpeg";
 import styles from "./Header.module.css";
-import ThemeSwitcher from "./temeSwitcher/ThemeSwitcher";
-import NavComponent from "./navComponent/NavComponent";
+import { ThemeSwitcher } from "./temeSwitcher/ThemeSwitcher";
+import { NavComponent } from "./navComponent/NavComponent";
 import { Close, Menu } from "@/utils/svglist";
 import { useState } from "react";
 
@@ -36,4 +36,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export { Header };

@@ -17,7 +17,7 @@ const components: MDXComponents = {
   strong: ({ children }) => {
     const transformStr = (str: string) => str.replace(":", "").toLowerCase();
     const regex = /(Tip:|Warning:|Information:)/;
-    const result = regex.exec(children);
+    const result = regex.exec(children?.toString() || "");
     const createClass = result
       ? `${transformStr(result[0])} text-preset-5`
       : "text-preset-7-semibold";
@@ -30,7 +30,7 @@ const components: MDXComponents = {
     );
   },
   em: (props) => <em {...props} className="dy-em" />,
-  a: (props) => <a {...props} />,
+  a: (props) => <a {...props} className="text-preset-7 dyA" />,
   code: ({ className, children }) => {
     const match = /language-(\w+)/.exec(className || "");
     return match ? (

@@ -10,5 +10,4 @@ const MailError = ({ err }: { err: boolean }) =>
     <></>
   );
 
-
-  export  default MailError;
+export default MailError;

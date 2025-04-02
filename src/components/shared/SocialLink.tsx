@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { LogoGithub, LogoLinkedin, LogoMentor, LogoX } from "@/utils/svglist";
 
 interface SocialLinkProps {
@@ -6,7 +7,7 @@ interface SocialLinkProps {
   height: number;
 }
 
- const SocialLink = ({ className, width, height }: SocialLinkProps) => {
+const SocialLink: FC<SocialLinkProps> = ({ className, width, height }) => {
   return (
     <ul className={className}>
       <li>
@@ -37,4 +38,4 @@ interface SocialLinkProps {
   );
 };
 
-export default SocialLink;
+export { SocialLink };

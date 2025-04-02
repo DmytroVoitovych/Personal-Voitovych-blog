@@ -1,6 +1,6 @@
 import { MDXRemoteProps } from "next-mdx-remote/rsc";
 import { NotsLogo } from "./ConditionalLogoNotes";
-import { CodeBlock, dracula,PrismLanguage } from '@react-email/code-block';
+import { CodeBlock, dracula, PrismLanguage } from "@react-email/code-block";
 
 type MDXComponents = MDXRemoteProps["components"];
 
@@ -79,11 +79,11 @@ const textPresets = {
   dyA: {
     textDecoration: "underline",
     textDecorationColor: "#93CEFC",
-    textDecorationSkipInk: "none",
+    textDecorationSkipInk: "none" as const,
     textDecorationThickness: "8px",
     textUnderlineOffset: "-1px",
     marginBottom: "24px",
-    textTransform: "capitalaize",
+    textTransform: "capitalize" as const,
   },
   divider: {
     border: "none",
@@ -104,7 +104,7 @@ const components: MDXComponents = {
   strong: ({ children }) => {
     const transformStr = (str: string) => str.replace(":", "").toLowerCase();
     const regex = /(Tip:|Warning:|Information:)/;
-    const result = regex.exec(children);
+    const result = regex.exec(children?.toString() || "");
     const createClass = result
       ? { ...textPresets.preset5, color: "#4a4846" }
       : { ...textPresets.preset7Semibold, color: "#4a4846" };

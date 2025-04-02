@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
-import Header from "@/components/Header";
-import NavComponent from "@/components/navComponent/NavComponent";
-import  Footer  from "@/components/Footer";
+import "@/app/globals.css";
+import { Header } from "@/components/Header";
+import { NavComponent } from "@/components/navComponent/NavComponent";
+import { Footer } from "@/components/Footer";
 import { Suspense } from "react";
-
-export const dynamic = "force-dynamic";
-export const fetchCache = "force-no-store";
 
 const dmSans = localFont({
   src: [
@@ -43,13 +40,11 @@ const dmSans = localFont({
     },
   ],
   variable: "--font-dmSans",
-  preload: true,
 });
 
 const firaCode = localFont({
   src: "../assets/fonts/Fira_Code/static/FiraCode-Regular.ttf",
   variable: "--font-firaCode",
-  preload:true
 });
 
 export const metadata: Metadata = {
@@ -63,14 +58,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${dmSans.variable}${firaCode.variable}`}>
-        
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${dmSans.variable}${firaCode.variable}`} suppressHydrationWarning>
         <div className="wrapper">
-          <Header />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Header />
+          </Suspense>
           <div className="innerWrapper">
-            <Suspense>
-            <NavComponent mobile={true} /></Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
+              <NavComponent mobile={true} />
+            </Suspense>
             <main>{children}</main>
             <Footer />
           </div>

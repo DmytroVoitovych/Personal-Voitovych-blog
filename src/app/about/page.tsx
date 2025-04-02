@@ -1,8 +1,8 @@
-import  SocialLink  from "@/components/shared/SocialLink";
+import { SocialLink } from "@/components/shared/SocialLink";
+import { ArtDirectionImage } from "@/components/shared/ArtDirectionImage";
 import styles from "./page.module.css";
-import ArtDirectionImage from "@/components/shared/ArtDirectionImage";
 
-export default function About() {
+export default function Page() {
   return (
     <section className={styles.sectionAbout}>
       <h1 className="text-preset-2">About Me</h1>
@@ -61,4 +61,4 @@ export default function About() {
       <hr className="divider" />
     </section>
   );
-}
+};

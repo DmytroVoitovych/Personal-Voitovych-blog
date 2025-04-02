@@ -2,7 +2,7 @@
 import { useState } from "react";
 import styles from "./ShowAllArticles.module.css";
 
- const ShowAllArticles = () => {
+const ShowAllArticles = () => {
   const [checked, setChecked] = useState<boolean>(false);
 
   return (

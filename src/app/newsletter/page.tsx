@@ -1,7 +1,7 @@
 import NewsForm from "@/components/formComponent/FormComponent";
 import styles from "./page.module.css";
 
-const Newsletter = () => {
+const Page = () => {
   return (
     <section className={styles.newsSection}>
       <h1 className="text-preset-2">Newsletter</h1>
@@ -19,4 +19,4 @@ const Newsletter = () => {
   );
 };
 
-export default Newsletter;
+export default Page;

@@ -1,11 +1,10 @@
-"use server";
 import Link from "next/link";
 import styles from "./ArticlesList.module.css";
 import { getLocalDate } from "./helpers";
 import { getDataViaSupabase } from "@/utils/supabase/helper";
-import { ArticlesListProps } from "@/utils/supabase/types";
+import type { ArticlesListProps } from "@/utils/supabase/types";
 
- const ArticlesList = async ({ query }: ArticlesListProps) => {
+const ArticlesList = async ({ query }: ArticlesListProps) => {
   const { data: articles } = query?.includes("description")
     ? await (
         await getDataViaSupabase(query)

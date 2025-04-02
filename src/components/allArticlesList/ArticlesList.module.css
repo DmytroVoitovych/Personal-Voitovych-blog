@@ -13,7 +13,7 @@
 
 .allArticlesList {
   @media (hover: hover) {
-   & > li:has(a:hover) {
+    & > li:has(a:hover) {
       background-color: var(--bg-hover);
       transition: all 250ms ease-in-out;
     }

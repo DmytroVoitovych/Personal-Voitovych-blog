@@ -1,8 +1,9 @@
-// import Image from "next/image";
+import SkeletonArticles from "@/components/Skeleton/Skeleton";
 import styles from "./page.module.css";
-import  ArticlesList  from "@/components/allArticlesList/ArticlesList";
-import  ShowAllArticles  from "@/components/moreArticles/ShowAllArticles";
-import  SocialLink  from "@/components/shared/SocialLink";
+import ArticlesList from "@/components/allArticlesList/ArticlesList";
+import ShowAllArticles from "@/components/moreArticles/ShowAllArticles";
+import { SocialLink } from "@/components/shared/SocialLink";
+import { Suspense } from "react";
 
 const homeDatabaseQuery: ["title", "id", "publishedAt", "slug"] = [
   "title",
@@ -11,9 +12,7 @@ const homeDatabaseQuery: ["title", "id", "publishedAt", "slug"] = [
   "slug",
 ];
 
-
-
-export default function Home() {
+export default async function Page() {
   return (
     <>
       <section className={styles.hero}>
@@ -33,7 +32,9 @@ export default function Home() {
       </section>
       <section className={styles.latestArticles}>
         <h2 className="text-preset-2">Latest Articles</h2>
-        <ArticlesList query={homeDatabaseQuery} />
+        <Suspense fallback={<SkeletonArticles />}>
+          <ArticlesList query={homeDatabaseQuery} />
+        </Suspense>
         <ShowAllArticles />
         <hr className="divider" />
       </section>
