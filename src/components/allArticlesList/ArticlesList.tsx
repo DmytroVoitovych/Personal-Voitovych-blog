@@ -3,6 +3,19 @@ import styles from "./ArticlesList.module.css";
 import { getLocalDate } from "./helpers";
 import { getDataViaSupabase } from "@/utils/supabase/helper";
 import type { ArticlesListProps } from "@/utils/supabase/types";
+import { createClient } from "@/utils/supabase/client";
+
+export async function generateStaticParams() {
+  const supabase = createClient();
+  const { data: articles } = await supabase
+    .from("Developers articles")
+    .select("slug");
+    
+  return articles?.map((article) => ({
+    slug: article.slug,
+  })) || [];
+}
+
 
 const ArticlesList = async ({ query }: ArticlesListProps) => {
   const { data: articles } = query?.includes("description")

@@ -3,7 +3,18 @@ import { getLocalDate } from "@/components/allArticlesList/helpers";
 import { MdHandledComponent } from "@/utils/mdx/MdHandledComponent";
 import components from "@/utils/mdx/customComponentsList";
 import { getDataViaSupabase } from "@/utils/supabase/helper";
+import { createClient } from "@/utils/supabase/client";
 
+export async function generateStaticParams() {
+  const supabase = createClient();
+  const { data: articles } = await supabase
+    .from("Developers articles")
+    .select("slug");
+    
+  return articles?.map((article) => ({
+    slug: article.slug,
+  })) || [];
+}
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
