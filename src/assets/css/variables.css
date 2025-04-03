@@ -83,6 +83,7 @@
   --success-cl: var(--green-700);
   --skeleton-main-cl: var(--neutral-400);
   --skeleton-extra-cl: var(--neutral-600);
+  --bg-img: url('/pattern-dark.svg');
 }
 
 :root.dark {
@@ -130,4 +131,5 @@
   --success-cl: var(--green-500);
   --skeleton-main-cl: var(--neutral-600);
   --skeleton-extra-cl: var(--neutral-900);
+  --bg-img: url('/pattern-light.svg');
 }

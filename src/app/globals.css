@@ -22,6 +22,28 @@ body {
   }
 }
 
+@media (min-width: 1224px) {
+  body {
+    background-image: var(--bg-img);
+    background-size: auto;
+    background-position: -223px 225px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  body::after{
+    content: '';
+    background-image: var(--bg-img);
+    background-size: auto;
+    background-repeat: no-repeat;  
+    width: 423px;
+    height: 423px;
+    position: fixed;
+    right: -223px;
+    top: 0;
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

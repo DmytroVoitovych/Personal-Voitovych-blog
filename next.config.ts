@@ -17,6 +17,7 @@ const nextConfig: NextConfig = {
     NEXT_PUBLIC_PASSWORD,
     NEXT_PUBLIC_SUPABASE_ANON_KEY,
   },
+ 
 
   webpack(config) {
     config.module.rules.push({

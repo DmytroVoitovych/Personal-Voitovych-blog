@@ -59,18 +59,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable}${firaCode.variable}`}>
+      <body
+        className={`${dmSans.variable}${firaCode.variable}`}
+       
+      >
         <Providers>
-        <div className="wrapper">
-          <Header />
-          <div className="innerWrapper">
-            <NavComponent mobile={true} />
-            <main>{children}</main>
-            <Footer />
+          <div className="wrapper">
+            <Header />
+            <div className="innerWrapper">
+              <NavComponent mobile={true} />
+              <main>{children}</main>
+              <Footer />
+            </div>
           </div>
-        </div>
         </Providers>
       </body>
     </html>
   );
-};
+}
