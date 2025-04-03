@@ -29,6 +29,7 @@ const ThemeSwitcher = () => {
         id="theme"
         onChange={switchTheme}
         checked={theme === "dark"}
+        aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
       />
       {theme !== "dark" ? <Moon /> : <Sun />}
     </label>
