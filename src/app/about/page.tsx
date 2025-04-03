@@ -1,6 +1,12 @@
 import { SocialLink } from "@/components/shared/SocialLink";
 import { ArtDirectionImage } from "@/components/shared/ArtDirectionImage";
 import styles from "./page.module.css";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+  description: "Here is information about author",
+};
 
 export default function Page() {
   return (

@@ -1,5 +1,11 @@
 import NewsForm from "@/components/formComponent/FormComponent";
 import styles from "./page.module.css";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Newsletter",
+  description: "Page where you can subscribe and get latest content",
+};
 
 const Page = () => {
   return (

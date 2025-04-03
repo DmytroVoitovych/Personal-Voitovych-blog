@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import avatar from "@/assets/images/avatar.jpeg";
 import styles from "./Header.module.css";
@@ -21,6 +20,7 @@ const Header = () => {
         className={styles.avatar}
         quality={100}
       />
+
       <div className={styles.rightBlock}>
         <NavComponent mobile={false} />
         <button

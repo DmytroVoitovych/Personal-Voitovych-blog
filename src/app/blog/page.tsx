@@ -1,6 +1,13 @@
 import ArticlesList from "@/components/allArticlesList/ArticlesList";
 import styles from "./page.module.css";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "Here are collections of useful articles",
+};
+
 const blogDatabaseQuery: ["title", "id", "publishedAt", "slug", "description"] = [
   "title",
   "id",

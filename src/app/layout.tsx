@@ -4,7 +4,7 @@ import "@/app/globals.css";
 import { Header } from "@/components/Header";
 import { NavComponent } from "@/components/navComponent/NavComponent";
 import { Footer } from "@/components/Footer";
-import { Suspense } from "react";
+import Providers from "@/components/progressComponent/ProgressProvider";
 
 const dmSans = localFont({
   src: [
@@ -58,21 +58,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${dmSans.variable}${firaCode.variable}`} suppressHydrationWarning>
+    <html lang="en">
+      <body className={`${dmSans.variable}${firaCode.variable}`}>
+        <Providers>
         <div className="wrapper">
-          <Suspense fallback={<div>Loading...</div>}>
-            <Header />
-          </Suspense>
+          <Header />
           <div className="innerWrapper">
-            <Suspense fallback={<div>Loading...</div>}>
-              <NavComponent mobile={true} />
-            </Suspense>
+            <NavComponent mobile={true} />
             <main>{children}</main>
             <Footer />
           </div>
         </div>
+        </Providers>
       </body>
     </html>
   );
-}
+};

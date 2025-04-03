@@ -4,6 +4,7 @@ import { MdHandledComponent } from "@/utils/mdx/MdHandledComponent";
 import components from "@/utils/mdx/customComponentsList";
 import { getDataViaSupabase } from "@/utils/supabase/helper";
 
+
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const { data: article } = await (await getDataViaSupabase()).supabase
@@ -16,10 +17,9 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <span className="text-preset-8-italic">
         Published {article?.publishedAt ? getLocalDate(article.publishedAt!) : "no data"}
       </span>
-
       <section className={styles.sectionContent}>
         <MdHandledComponent source={article?.content || "no data"} components={components} />
       </section>
     </article>
   );
-};
+}

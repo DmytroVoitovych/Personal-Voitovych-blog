@@ -9,6 +9,7 @@ const {
 
 const nextConfig: NextConfig = {
   /* config options here */
+
   env: {
     NEXT_PUBLIC_SUPABASE_URL,
     NEXT_PUBLIC_HOST,
