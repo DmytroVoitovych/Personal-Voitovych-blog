@@ -5,6 +5,8 @@ import ShowAllArticles from "@/components/moreArticles/ShowAllArticles";
 import { SocialLink } from "@/components/shared/SocialLink";
 import { Suspense } from "react";
 
+export const revalidate = 1800;
+
 const homeDatabaseQuery: ["title", "id", "publishedAt", "slug"] = [
   "title",
   "id",

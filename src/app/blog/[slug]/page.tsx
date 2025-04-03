@@ -5,6 +5,8 @@ import components from "@/utils/mdx/customComponentsList";
 import { getDataViaSupabase } from "@/utils/supabase/helper";
 import { createClient } from "@/utils/supabase/client";
 
+export const revalidate = 86400;
+
 export async function generateStaticParams() {
   const supabase = createClient();
   const { data: articles } = await supabase

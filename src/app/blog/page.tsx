@@ -2,6 +2,7 @@ import ArticlesList from "@/components/allArticlesList/ArticlesList";
 import styles from "./page.module.css";
 import { Metadata } from "next";
 
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Blog",

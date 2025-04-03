@@ -22,8 +22,8 @@ export async function createClient() {
         fetch: createFetch({
           cache: "force-cache",
           next: {
-            revalidate: 360,
-            tags: ["supabase"],
+            revalidate: 1800,
+            tags: ["supabase"], 
           },
         }),
       },
