@@ -230,6 +230,9 @@
 }
 
 .dy-table {
+display: block;  
+overflow-x: auto;
+
   th,
   td {
     border: 1px solid var(--bor-cl);
